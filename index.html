@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNN predictor using FL</title>
+</head>
+<body>
+    <h1>Predict with Federated Learning model</h1>
+    <form action="/predict" method="post">
+        <label for="features">Enter features (comma-separated):</label>
+        <input type="text" id="features" name="features">
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+        <h2>{{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
